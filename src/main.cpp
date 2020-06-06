@@ -1,4 +1,4 @@
-/* Code tested on ESP32-CAM myBoar
+/* Code tested on ESP32-CAM
         6th of June, 2020         */
 #include <WiFi.h>
 #include <WiFiClient.h>
@@ -18,6 +18,8 @@ The bit 1 indicates appliance
 #define A2_OFF          0x02
 #define A2_ON           0x03
 
+/* In the ESP32-CAM board LED connected to GPIO 4 was active high and LED connected 
+to GPIO 33 was active low. Please change these defiitions as per your hardware */
 #define APPLIANCE_1     4
 #define APPLIANCE_2     33
 #define APPLIANCE_1_ON  digitalWrite(APPLIANCE_1, HIGH)
